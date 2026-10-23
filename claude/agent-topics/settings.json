@@ -1,0 +1,6 @@
+{
+  "subagentStatusLine": {
+    "type": "command",
+    "command": "jq -c '.tasks[] | {id, content: ([.name, .description, (if .label != .description then .label else empty end), \"\\((.tokenCount // 0) / 1000 | floor)k tokens\"] | map(select(. != null and . != \"\")) | join(\" · \"))}'"
+  }
+}
