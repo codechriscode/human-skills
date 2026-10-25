@@ -6,7 +6,7 @@ The anti-meat-proxy skill set. Everything you need to be productive, continue to
 
 | Skill | What it does | Claude Code | opencode |
 | --- | --- | --- | --- |
-| [agent-topics](claude/agent-topics/skills/agent-topics/SKILL.md) | Split a discussion into topics, one subagent per topic. Chat with each agent directly; they idle between messages and report back only when told to wrap. | ✅ | 🚧 in progress |
+| [agent-topics](claude/agent-topics/skills/agent-topics/SKILL.md) | Keep conversations manageable and profound. Go as far as you want to go on each topic until you have a precise decision. Split a discussion into topics, one subagent per topic. Chat with each agent directly; they idle between messages and report back only when told to wrap. | ✅ | 🚧 in progress |
 | [walk-me-through](claude/walk-me-through/skills/walk-me-through/SKILL.md) | Teach a senior developer one subject (architecture, data, business rules, a ticket or a PR) in 3-5 short turns, with a quiz before each new turn and pickable teaching frameworks. | ✅ | 🚧 in progress |
 
 ## Install — Claude Code
