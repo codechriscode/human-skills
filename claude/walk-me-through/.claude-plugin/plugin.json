@@ -5,8 +5,8 @@
   "author": {
     "name": "Chris"
   },
-  "homepage": "https://github.com/codechriscode/agent-topics",
-  "repository": "https://github.com/codechriscode/agent-topics",
+  "homepage": "https://github.com/codechriscode/human-skills",
+  "repository": "https://github.com/codechriscode/human-skills",
   "license": "MIT",
   "keywords": ["learning", "onboarding", "code-review", "quiz"]
 }
