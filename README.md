@@ -10,7 +10,7 @@ Leverages shells to keep subagent sessions alive.
 | Skill | What it does | Claude Code | opencode |
 | --- | --- | --- | --- |
 | [agent-topics](claude/agent-topics/skills/agent-topics/SKILL.md) | Split a discussion into topics, one subagent per topic. Chat with each agent directly; they idle between messages and report back only when told to wrap. | ✅ | 🚧 in progress |
-| [walk-me-through](claude/walk-me-through/skills/walk-me-through/SKILL.md) | Teach a senior developer one subject (architecture, data, business rules, a ticket or a PR) in 3-5 short turns, with a quiz before each new turn and pickable teaching frameworks. | ✅ | — |
+| [walk-me-through](claude/walk-me-through/skills/walk-me-through/SKILL.md) | Teach a senior developer one subject (architecture, data, business rules, a ticket or a PR) in 3-5 short turns, with a quiz before each new turn and pickable teaching frameworks. | ✅ | 🚧 in progress |
 
 ## Install — Claude Code
 
@@ -43,16 +43,18 @@ cp -r agent-topics/claude/agent-topics/skills/agent-topics ~/.claude/skills/
 
 ## Install — opencode (in progress, being tested)
 
-The opencode flavor ships two files, and opencode keeps skills and commands in separate directories, so both get copied:
+The opencode flavor ships two files per skill, and opencode keeps skills and commands in separate directories, so both get copied:
 
 ```sh
 git clone https://github.com/codechriscode/agent-topics
-mkdir -p ~/.config/opencode/skills/agent-topics ~/.config/opencode/command
-cp agent-topics/opencode/agent-topics/SKILL.md ~/.config/opencode/skills/agent-topics/
-cp agent-topics/opencode/agent-topics/command/agent-topics.md ~/.config/opencode/command/
+for skill in agent-topics walk-me-through; do
+  mkdir -p ~/.config/opencode/skills/$skill ~/.config/opencode/command
+  cp agent-topics/opencode/$skill/SKILL.md ~/.config/opencode/skills/$skill/
+  cp agent-topics/opencode/$skill/command/$skill.md ~/.config/opencode/command/
+done
 ```
 
-`/agent-topics <topics>` then works as a literal slash command, and the skill also triggers by phrase.
+`/agent-topics <topics>` and `/walk-me-through <subject>` then work as literal slash commands, and both skills also trigger by phrase.
 
 > Both flavors share the skill name. Install only the flavor for your harness: opencode also reads `~/.claude/skills/`, so having both flavors in directories it scans causes a name collision.
 
