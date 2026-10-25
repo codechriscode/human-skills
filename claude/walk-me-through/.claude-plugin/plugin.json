@@ -1,0 +1,12 @@
+{
+  "name": "walk-me-through",
+  "description": "Teach a senior developer one subject in 3-5 short turns, with a quiz before each new turn and pickable teaching frameworks",
+  "version": "1.0.0",
+  "author": {
+    "name": "Chris"
+  },
+  "homepage": "https://github.com/codechriscode/agent-topics",
+  "repository": "https://github.com/codechriscode/agent-topics",
+  "license": "MIT",
+  "keywords": ["learning", "onboarding", "code-review", "quiz"]
+}

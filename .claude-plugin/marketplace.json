@@ -10,7 +10,23 @@
       "source": "./claude/agent-topics",
       "description": "Split a discussion into topics, one background subagent per topic that the user chats with directly",
       "category": "collaboration",
-      "keywords": ["subagents", "topics", "parallel-work"]
+      "keywords": [
+        "subagents",
+        "topics",
+        "parallel-work"
+      ]
+    },
+    {
+      "name": "walk-me-through",
+      "source": "./claude/walk-me-through",
+      "description": "Teach a senior developer one subject in 3-5 short turns, with a quiz before each new turn and pickable teaching frameworks",
+      "category": "learning",
+      "keywords": [
+        "learning",
+        "onboarding",
+        "code-review",
+        "quiz"
+      ]
     }
   ]
 }

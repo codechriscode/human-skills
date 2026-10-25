@@ -10,6 +10,7 @@ Leverages shells to keep subagent sessions alive.
 | Skill | What it does | Claude Code | opencode |
 | --- | --- | --- | --- |
 | [agent-topics](claude/agent-topics/skills/agent-topics/SKILL.md) | Split a discussion into topics, one subagent per topic. Chat with each agent directly; they idle between messages and report back only when told to wrap. | ✅ | 🚧 in progress |
+| [walk-me-through](claude/walk-me-through/skills/walk-me-through/SKILL.md) | Teach a senior developer one subject (architecture, data, business rules, a ticket or a PR) in 3-5 short turns, with a quiz before each new turn and pickable teaching frameworks. | ✅ | — |
 
 ## Install — Claude Code
 
@@ -18,6 +19,7 @@ Add this repo as a plugin marketplace and install the skill:
 ```sh
 claude plugin marketplace add codechriscode/agent-topics
 claude plugin install agent-topics@agent-topics
+claude plugin install walk-me-through@agent-topics
 ```
 
 Or from inside a session:
