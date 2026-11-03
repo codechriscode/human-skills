@@ -138,9 +138,10 @@ One AskUserQuestion call with 3 or 4 questions about the turn just taught.
 - Do not ask for trivia (line numbers, exact method names) unless the name itself carries meaning.
 - `header` is short, for example `Q1 rules`.
 
-After the answers:
+After the answers, in this order:
 - Show the score, for example `3/4`.
-- For each wrong answer: the correct answer, why, and one `file_path:line` to verify it. At most 300 characters per correction.
+- **Congratulate first.** Start with the right answers. For each one, say it is correct and repeat the key explanation in one short sentence (at most 150 characters). This makes the right knowledge stronger, not only the gaps.
+- Then, for each wrong answer: the correct answer, why, and one `file_path:line` to verify it. At most 300 characters per correction.
 - Add each gap to the recap file. Use the gaps in the next turn and in a later retrieval question.
 - Then give the next turn in the same message.
 
