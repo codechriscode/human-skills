@@ -27,6 +27,18 @@
         "code-review",
         "quiz"
       ]
+    },
+    {
+      "name": "polyglot",
+      "source": "./claude/polyglot",
+      "description": "Chat in the user's language and write to each environment in the language its readers use",
+      "category": "communication",
+      "keywords": [
+        "language",
+        "i18n",
+        "translation",
+        "communication"
+      ]
     }
   ]
 }

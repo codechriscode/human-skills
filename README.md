@@ -8,6 +8,7 @@ The anti-meat-proxy skill set. Everything you need to be productive, continue to
 | --- | --- | --- | --- |
 | [agent-topics](claude/agent-topics/skills/agent-topics/SKILL.md) | Keep conversations manageable and profound. Go as far as you want to go on each topic until you have a precise decision. Split a discussion into topics, one subagent per topic. Chat with each agent directly; they idle between messages and report back only when told to wrap. | ✅ | 🚧 in progress |
 | [walk-me-through](claude/walk-me-through/skills/walk-me-through/SKILL.md) | Teach a senior developer one subject (architecture, data, business rules, a ticket or a PR) in 3-5 short turns, with a quiz before each new turn and pickable teaching frameworks. | ✅ | 🚧 in progress |
+| [polyglot](claude/polyglot/skills/polyglot/SKILL.md) | Chat in your language. Write to each environment (Jira, Slack, GitHub, code) in the language its readers use. Set two languages once; rules load in every session and learn each new environment with no extra fetches when possible. | ✅ | 🚧 in progress |
 
 ## Install — Claude Code
 
@@ -17,6 +18,7 @@ Add this repo as a plugin marketplace and install the skill:
 claude plugin marketplace add codechriscode/human-skills
 claude plugin install agent-topics@human-skills
 claude plugin install walk-me-through@human-skills
+claude plugin install polyglot@human-skills
 ```
 
 Or from inside a session:
@@ -44,14 +46,14 @@ The opencode flavor ships two files per skill, and opencode keeps skills and com
 
 ```sh
 git clone https://github.com/codechriscode/human-skills
-for skill in agent-topics walk-me-through; do
+for skill in agent-topics walk-me-through polyglot; do
   mkdir -p ~/.config/opencode/skills/$skill ~/.config/opencode/command
   cp human-skills/opencode/$skill/SKILL.md ~/.config/opencode/skills/$skill/
   cp human-skills/opencode/$skill/command/$skill.md ~/.config/opencode/command/
 done
 ```
 
-`/agent-topics <topics>` and `/walk-me-through <subject>` then work as literal slash commands, and both skills also trigger by phrase.
+`/agent-topics <topics>`, `/walk-me-through <subject>` and `/polyglot <languages>` then work as literal slash commands, and both skills also trigger by phrase.
 
 > Both flavors share the skill name. Install only the flavor for your harness: opencode also reads `~/.claude/skills/`, so having both flavors in directories it scans causes a name collision.
 
